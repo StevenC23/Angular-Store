@@ -1,25 +1,2 @@
-{{ "Hola Mundo" }}
-<input type="text" [(ngModel)]="title" />
-{{ title }}
-<div *ngIf="title == 'Steven'">esto es un steven</div>
-<button (click)="addItem()">Add item</button>
-<ul>
-  <li *ngIf="items.length == 0">La lista está vacia</li>
-  <li *ngFor="let item of items; index as i">
-    {{ item }} -- {{ i + 1 }}
-    <button (click)="deleteItem(i)">Delete</button>
-  </li>
-</ul>
-
-<div *ngFor="let pd of products">
-  <app-product
-    (productClicked)="clickProduct($event)"
-    [product]="pd"
-  ></app-product>
-</div>
-
-<div [ngSwitch]="title">
-  <p *ngSwitchCase="'Steven'">Steven</p>
-  <p *ngSwitchCase="'false'">false</p>
-  <p *ngSwitchDefault>No hay coinsidencias</p>
-</div>
+<h1>Navbar</h1>
+<router-outlet> </router-outlet>

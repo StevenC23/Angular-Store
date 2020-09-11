@@ -1,6 +1,8 @@
 <div>
-  <h3>{{ product.nombre }}</h3>
+  <h3 appHighlight>{{ product.nombre | uppercase }}</h3>
   <img [src]="product.img" alt="" width="50px" />
-  <h4>{{ product.price }}</h4>
+  <h4>{{ product.price | currency }}</h4>
+  <p>{{ product.description | slice: 0:3 }}</p>
   <button (click)="addCart()">Agregar al carrito</button>
+  <a [routerLink]="['/products', product.id]">Ver a detalle</a>
 </div>
